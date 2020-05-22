@@ -364,6 +364,7 @@ resource "kubernetes_service" "kubernetes_dashboard" {
 
   spec {
     selector = local.kubernetes_deployment_labels_selector
+	type = var.kubernetes_service_type
 
     port {
       port = 443
@@ -381,6 +382,7 @@ resource "kubernetes_service" "kubernetes_metrics_scraper" {
 
   spec {
     selector = local.kubernetes_deployment_labels_selector_metrics
+	type = var.kubernetes_service_type
 
     port {
       port = 8000

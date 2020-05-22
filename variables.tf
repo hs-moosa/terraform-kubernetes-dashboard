@@ -104,6 +104,12 @@ variable "kubernetes_service_name" {
   description = "Kubernetes service name."
 }
 
+variable "kubernetes_service_type" {
+  type = string
+  default = "ClusterIP"
+  description = "Kubernetes service type"
+}
+
 variable "kubernetes_ingress_name" {
   type = string
   default = "kubernetes-dashboard"
